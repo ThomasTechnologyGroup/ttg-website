@@ -1,1 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact | Thomas Technology Group</title>
+  <meta name="description" content="Contact Thomas Technology Group for managed IT and Microsoft cloud services." />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <div class="brand">
+      <a href="index.html" aria-label="Thomas Technology Group Home">
+        <img src="assets/ttg-logo.png" alt="Thomas Technology Group logo" />
+      </a>
+      <div class="tag">Managed IT & Cloud Services<br/>for small business</div>
+    </div>
+    <nav class="menu" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a class="active" href="contact.html">Contact</a>
+      <a class="btn" href="contact.html">Request Support</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <h1>Contact</h1>
+        <p class="lead">Tell us what you need help with. We’ll respond as soon as possible.</p>
+
+        <div class="card">
+          <h3>Direct contact</h3>
+          <p><strong>Email:</strong> <a href="mailto:info@thomastechnologygroup.com">info@thomastechnologygroup.com</a></p>
+          <p style="margin-top:8px;"><strong>Phone:</strong> <a href="tel:+1-000-000-0000">(000) 000-0000</a></p>
+          <p style="margin-top:8px;" class="small">Replace the phone number when ready.</p>
+        </div>
+      </div>
+
+      <aside class="card">
+        <h3>Message form (coming next)</h3>
+        <p class="small">Static websites need a connector for forms. Next we can wire this to an Azure Logic App (recommended) so submissions email you safely.</p>
+
+        <form class="form" onsubmit="event.preventDefault(); alert('Form hookup is next (Logic App). For now, please email us.');">
+          <input type="text" name="name" placeholder="Your name" />
+          <input type="email" name="email" placeholder="Your email" />
+          <textarea name="message" placeholder="How can we help?"></textarea>
+          <button class="btn" type="submit">Send message</button>
+        </form>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container footer-row">
+    <div>© <span id="year"></span> Thomas Technology Group</div>
+    <div class="small"><a href="services.html">Services</a></div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
 
