@@ -3,10 +3,120 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Thomas Technology Group</title>
+  <title>Thomas Technology Group | Managed IT & Cloud Services</title>
+  <meta name="description" content="Managed IT and Microsoft cloud services for small businesses. Support, security, Microsoft 365, and reliable backup." />
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-  <h1>Thomas Technology Group</h1>
-  <p>Website coming soon.</p>
+<header>
+  <div class="container nav">
+    <div class="brand">
+      <a href="index.html" aria-label="Thomas Technology Group Home">
+        <img src="assets/ttg-logo.png" alt="Thomas Technology Group logo" />
+      </a>
+      <div class="tag">Managed IT & Cloud Services<br/>for small business</div>
+    </div>
+    <nav class="menu" aria-label="Primary">
+      <a class="active" href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a class="btn" href="contact.html">Request Support</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <h1>Reliable IT for small business.<br/>Cloud-ready and secure.</h1>
+        <p class="lead">
+          Thomas Technology Group provides managed IT services and Microsoft cloud support that keeps your team productive,
+          protected, and moving forward—without the chaos.
+        </p>
+        <div style="display:flex; gap:12px; flex-wrap:wrap;">
+          <a class="btn" href="contact.html">Talk to us</a>
+          <a class="btn secondary" href="services.html">View services</a>
+        </div>
+
+        <div class="pills" aria-label="Highlights">
+          <div class="pill">Managed IT Services</div>
+          <div class="pill">Microsoft 365</div>
+          <div class="pill">Security & Compliance Basics</div>
+          <div class="pill">Backup & Disaster Readiness</div>
+          <div class="pill">Networking & Wi-Fi</div>
+        </div>
+      </div>
+
+      <aside class="card">
+        <h3>What you get</h3>
+        <div class="kpi">
+          <div class="row"><span class="dot blue"></span><div><strong>Proactive support</strong><div class="small">Monitoring, patching, and fast response.</div></div></div>
+          <div class="row"><span class="dot green"></span><div><strong>Cloud expertise</strong><div class="small">Microsoft 365 setup, migration, and optimization.</div></div></div>
+          <div class="row"><span class="dot orange"></span><div><strong>Practical security</strong><div class="small">Email protection, MFA, and policy-driven basics.</div></div></div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2>Services built for small business</h2>
+      <div class="grid3">
+        <div class="card">
+          <h3>Managed IT Services</h3>
+          <p>Day-to-day support, monitoring, patching, and device management to keep your business running.</p>
+          <ul class="list">
+            <li>Help desk & remote support</li>
+            <li>Device and patch management</li>
+            <li>Monitoring and maintenance</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Microsoft Cloud Services</h3>
+          <p>Deploy, migrate, and support Microsoft 365 and related cloud tools the right way.</p>
+          <ul class="list">
+            <li>Microsoft 365 onboarding & migration</li>
+            <li>Email, Teams, OneDrive/SharePoint guidance</li>
+            <li>Identity (Entra ID) fundamentals</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Backup & Continuity</h3>
+          <p>Recoverable backups and practical planning so downtime doesn’t become a disaster.</p>
+          <ul class="list">
+            <li>Workstation/server backup</li>
+            <li>Microsoft 365 backup options</li>
+            <li>Disaster readiness planning</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="banner">
+        <div>
+          <strong>Ready to modernize your IT?</strong>
+          <div class="small">Tell us what you’re dealing with and we’ll recommend the next best step.</div>
+        </div>
+        <a class="btn" href="contact.html">Contact Thomas Technology Group</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container footer-row">
+    <div>© <span id="year"></span> Thomas Technology Group</div>
+    <div class="small">
+      <a href="contact.html">Contact</a> • <span>Colstrip, MT (and remote support)</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
