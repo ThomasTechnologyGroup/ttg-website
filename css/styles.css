@@ -59,9 +59,21 @@ header{
   box-shadow:none;
 }
 
-.hero{
-  padding:58px 0 30px;
+.hero h1{
+  position:relative;
+  padding-left:14px;
 }
+.hero h1::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:10px;
+  bottom:10px;
+  width:5px;
+  border-radius:999px;
+  background: linear-gradient(180deg, var(--blue), var(--green));
+}
+
 .hero-grid{
   display:grid;
   grid-template-columns: 1.2fr .8fr;
