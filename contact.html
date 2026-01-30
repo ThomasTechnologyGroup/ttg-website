@@ -7,145 +7,145 @@
   <meta name="description" content="Contact Thomas Technology Group for managed IT and Microsoft cloud services." />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
+
 <body>
-<header>
-  <div class="container nav">
-    <div class="brand">
-      <a href="index.html" aria-label="Thomas Technology Group Home">
-        <img src="assets/ttg-logo.png" alt="Thomas Technology Group logo" />
-      </a>
-      <div class="tag">Managed IT & Cloud Services<br/>for small business</div>
-    </div>
-    <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primaryMenu" id="menuBtn">
-  <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-    <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-  </svg>
-</button>
-
-<nav class="menu" id="primaryMenu" aria-label="Primary">
-  <a class="active" href="index.html">Home</a>
-  <a href="services.html">Services</a>
-  <a href="about.html">About</a>
-  <a href="contact.html">Contact</a>
-  <a class="btn" href="contact.html">Request Support</a>
-</nav>
-
-  </div>
-</header>
-
-<main>
-  <section class="hero">
-    <div class="container hero-grid">
-      <div>
-        <h1>Contact</h1>
-        <p class="lead">Tell us what you need help with. We’ll respond as soon as possible.</p>
-
-        <div class="card">
-          <h3>Direct contact</h3>
-          <p><strong>Email:</strong> <a href="mailto:information@thomastechnologygroup.com">information@thomastechnologygroup.com</a></p>
-          <p style="margin-top:8px;"><strong>Phone:</strong> <a href="tel:+1-717-329-9704">(717) 329-9704</a></p>
-        </div>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <a href="index.html" aria-label="Thomas Technology Group Home">
+          <img src="assets/ttg-logo.png" alt="Thomas Technology Group logo" />
+        </a>
+        <div class="tag">Managed IT & Cloud Services<br/>for small business</div>
       </div>
 
-      <aside class="card">
-        <h3>Request Information or Support</h3>
-          <p class="small">Tell us a bit about your business and what you’re looking for. We’ll review your message and get back to you as soon as possible.</p>
+      <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primaryMenu" id="menuBtn">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
 
+      <nav class="menu" id="primaryMenu" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a class="active" href="contact.html">Contact</a>
+        <a class="btn" href="contact.html">Request Support</a>
+      </nav>
+    </div>
+  </header>
 
-        <form id="contactForm" class="form">
-          <input type="text" name="name" placeholder="Your name" required />
-          <input type="email" name="email" placeholder="Your email" required />
-          <textarea name="message" placeholder="How can we help?" required></textarea>
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <h1>Contact</h1>
+          <p class="lead">Tell us what you need help with. We’ll respond as soon as possible.</p>
+
+          <div class="card">
+            <h3>Direct contact</h3>
+            <p><strong>Email:</strong> <a href="mailto:information@thomastechnologygroup.com">information@thomastechnologygroup.com</a></p>
+            <p style="margin-top:8px;"><strong>Phone:</strong> <a href="tel:+1-717-329-9704">(717) 329-9704</a></p>
+          </div>
+        </div>
+
+        <aside class="card">
+          <h3>Request Information or Support</h3>
+          <p class="small">
+            Tell us a bit about your business and what you’re looking for. We’ll review your message and get back to you as soon as possible.
+          </p>
+
+          <form id="contactForm" class="form">
+            <input type="text" name="name" placeholder="Your name" required />
+            <input type="email" name="email" placeholder="Your email" required />
+            <textarea name="message" placeholder="How can we help?" required></textarea>
 
             <!-- Honeypot (bots fill this; humans won't see it) -->
             <div style="position:absolute; left:-5000px; top:auto; width:1px; height:1px; overflow:hidden;">
-              <label>Website</label>
+              <label>Company website</label>
               <input type="text" name="company_site" tabindex="-1" autocomplete="off" />
             </div>
 
             <button class="btn" type="submit" id="submitBtn">Send message</button>
             <div id="formStatus" class="small" style="margin-top:10px;"></div>
-        </form>
+          </form>
+        </aside>
+      </div>
+    </section>
+  </main>
 
-      </aside>
+  <footer>
+    <div class="container footer-row">
+      <div>© <span id="year"></span> Thomas Technology Group</div>
+      <div class="small"><a href="services.html">Services</a></div>
     </div>
-  </section>
-</main>
+  </footer>
 
-<footer>
-  <div class="container footer-row">
-    <div>© <span id="year"></span> Thomas Technology Group</div>
-    <div class="small"><a href="services.html">Services</a></div>
-  </div>
-</footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 
-<script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
-<script>
-  const LOGIC_APP_URL = "https://prod-22.centralus.logic.azure.com:443/workflows/5efd8894fb154d0f971ad77116a43ceb/triggers/When_an_HTTP_request_is_received/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2FWhen_an_HTTP_request_is_received%2Frun&sv=1.0&sig=jxY4L79fInWPmJNHkuKUPiTVeg9B-j9UIAuABfPlUKs";
+  <script>
+    const LOGIC_APP_URL = "https://prod-22.centralus.logic.azure.com:443/workflows/5efd8894fb154d0f971ad77116a43ceb/triggers/When_an_HTTP_request_is_received/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2FWhen_an_HTTP_request_is_received%2Frun&sv=1.0&sig=jxY4L79fInWPmJNHkuKUPiTVeg9B-j9UIAuABfPlUKs";
 
-  const form = document.getElementById("contactForm");
-  const statusEl = document.getElementById("formStatus");
-  const btn = document.getElementById("submitBtn");
+    const contactForm = document.getElementById("contactForm");
+    const statusEl = document.getElementById("formStatus");
+    const submitBtn = document.getElementById("submitBtn");
 
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
-    statusEl.textContent = "";
-    btn.disabled = true;
-    btn.textContent = "Sending...";
+    contactForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      statusEl.textContent = "";
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Sending...";
 
-    const data = Object.fromEntries(new FormData(form).entries());
+      const data = Object.fromEntries(new FormData(contactForm).entries());
 
-    try {
-      const res = await fetch(LOGIC_APP_URL, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data)
-      });
+      try {
+        const res = await fetch(LOGIC_APP_URL, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data)
+        });
 
-      if (!res.ok) throw new Error("Request failed");
+        if (!res.ok) throw new Error("Request failed");
 
-      statusEl.textContent = "Message sent. We’ll get back to you shortly.";
-      form.reset();
-    } catch (err) {
-      statusEl.textContent = "Sorry — something went wrong. Please email us instead.";
-      console.error(err);
-    } finally {
-      btn.disabled = false;
-      btn.textContent = "Send message";
-    }
-  });
-</script>
- 
-<script>
-  const btn = document.getElementById('menuBtn');
-  const menu = document.getElementById('primaryMenu');
-
-  if (btn && menu){
-    btn.addEventListener('click', () => {
-      const open = menu.classList.toggle('is-open');
-      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-    });
-
-    // Close menu when clicking a link (mobile)
-    menu.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => {
-        menu.classList.remove('is-open');
-        btn.setAttribute('aria-expanded', 'false');
-      });
-    });
-
-    // Close menu if you tap outside
-    document.addEventListener('click', (e) => {
-      if (!menu.contains(e.target) && !btn.contains(e.target)){
-        menu.classList.remove('is-open');
-        btn.setAttribute('aria-expanded', 'false');
+        statusEl.textContent = "Message sent. We’ll get back to you shortly.";
+        contactForm.reset();
+      } catch (err) {
+        statusEl.textContent = "Sorry — something went wrong. Please email us instead.";
+        console.error(err);
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = "Send message";
       }
     });
-  }
-</script>
+  </script>
 
- </body>
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const menu = document.getElementById('primaryMenu');
+
+    if (menuBtn && menu) {
+      menuBtn.addEventListener('click', () => {
+        const open = menu.classList.toggle('is-open');
+        menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+
+      // Close menu when clicking a link (mobile)
+      menu.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => {
+          menu.classList.remove('is-open');
+          menuBtn.setAttribute('aria-expanded', 'false');
+        });
+      });
+
+      // Close menu if you tap outside
+      document.addEventListener('click', (e) => {
+        if (!menu.contains(e.target) && !menuBtn.contains(e.target)) {
+          menu.classList.remove('is-open');
+          menuBtn.setAttribute('aria-expanded', 'false');
+        }
+      });
+    }
+  </script>
+</body>
 </html>
-
