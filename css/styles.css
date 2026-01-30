@@ -151,3 +151,45 @@ input, textarea{
 }
 textarea{ min-height:120px; resize:vertical; }
 
+/* ---------- Responsive header / mobile menu ---------- */
+.menu-toggle{
+  display:none;
+  align-items:center;
+  justify-content:center;
+  width:42px;
+  height:42px;
+  border-radius:12px;
+  border:1px solid var(--line);
+  background:#fff;
+  cursor:pointer;
+}
+.menu-toggle svg{ width:22px; height:22px; }
+
+@media (max-width: 860px){
+  header{ position:sticky; top:0; }
+  .nav{ align-items:center; }
+  .brand .tag{ display:none; } /* hides the small tagline to reduce header height on mobile */
+  .menu-toggle{ display:flex; }
+
+  /* turn the menu into a dropdown panel */
+  .menu{
+    display:none;
+    position:absolute;
+    left:0;
+    right:0;
+    top:72px;
+    margin:0 auto;
+    width:min(1100px, 92vw);
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:16px;
+    box-shadow: var(--shadow);
+    padding:10px;
+    flex-direction:column;
+    gap:6px;
+  }
+  .menu a{ width:100%; }
+  .menu .btn{ text-align:center; }
+
+  .menu.is-open{ display:flex; }
+}
