@@ -4,148 +4,166 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contact | Thomas Technology Group</title>
-  <meta name="description" content="Contact Thomas Technology Group for managed IT and Microsoft cloud services." />
+  <meta name="description" content="Contact Thomas Technology Group for managed IT services, Microsoft 365 support, and bookkeeping services." />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 
 <body>
-  <header>
-    <div class="container nav">
-      <div class="brand">
-        <a href="index.html" aria-label="Thomas Technology Group Home">
-          <img src="assets/ttg-logo.png" alt="Thomas Technology Group logo" />
-        </a>
-        <div class="tag">Managed IT & Cloud Services<br/>for small business</div>
-      </div>
-
-      <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primaryMenu" id="menuBtn">
-        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        </svg>
-      </button>
-
-      <nav class="menu" id="primaryMenu" aria-label="Primary">
-        <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="about.html">About</a>
-        <a class="active" href="contact.html">Contact</a>
-        <a class="btn" href="contact.html">Request Support</a>
-      </nav>
+<header>
+  <div class="container nav">
+    <div class="brand">
+      <a href="index.html" aria-label="Thomas Technology Group Home">
+        <img src="assets/ttg-logo.png" alt="Thomas Technology Group logo" />
+      </a>
+      <div class="tag">Managed IT • Microsoft 365 • Bookkeeping<br/>for small business</div>
     </div>
-  </header>
 
-  <main>
-    <section class="hero">
-      <div class="container hero-grid">
-        <div>
-          <h1>Contact</h1>
-          <p class="lead">Tell us what you need help with. We’ll respond as soon as possible.</p>
+    <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primaryMenu" id="menuBtn">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
 
-          <div class="card">
-            <h3>Direct contact</h3>
-            <p><strong>Email:</strong> <a href="mailto:information@thomastechnologygroup.com">information@thomastechnologygroup.com</a></p>
-            <p style="margin-top:8px;"><strong>Phone:</strong> <a href="tel:+1-717-329-9704">(717) 329-9704</a></p>
-          </div>
+    <nav class="menu" id="primaryMenu" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a class="active" href="contact.html">Contact</a>
+      <a class="btn" href="contact.html">Request Support</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <h1>Contact</h1>
+        <p class="lead">
+          Tell us what you’re working on and what you need help with. We’ll review your message and follow up as soon as possible.
+        </p>
+
+        <div class="pills" aria-label="Highlights">
+          <div class="pill">Managed IT Services</div>
+          <div class="pill">Microsoft 365</div>
+          <div class="pill">QuickBooks Online</div>
+          <div class="pill">Reconciliations</div>
+          <div class="pill">Cleanups</div>
         </div>
 
-        <aside class="card">
-          <h3>Request Information or Support</h3>
-          <p class="small">
-            Tell us a bit about your business and what you’re looking for. We’ll review your message and get back to you as soon as possible.
+        <div style="margin-top:16px;" class="card">
+          <h3>Direct contact</h3>
+          <p><strong>Email:</strong> <a href="mailto:information@thomastechnologygroup.com">information@thomastechnologygroup.com</a></p>
+          <p style="margin-top:8px;"><strong>Phone:</strong> <a href="tel:+1-717-329-9704">(717) 329-9704</a></p>
+          <p style="margin-top:10px;" class="small">
+            If you prefer, email us directly with a brief description of your needs and the best time to reach you.
           </p>
-
-          <form id="contactForm" class="form">
-            <input type="text" name="name" placeholder="Your name" required />
-            <input type="email" name="email" placeholder="Your email" required />
-            <textarea name="message" placeholder="How can we help?" required></textarea>
-
-            <!-- Honeypot (bots fill this; humans won't see it) -->
-            <div style="position:absolute; left:-5000px; top:auto; width:1px; height:1px; overflow:hidden;">
-              <label>Company website</label>
-              <input type="text" name="company_site" tabindex="-1" autocomplete="off" />
-            </div>
-
-            <button class="btn" type="submit" id="submitBtn">Send message</button>
-            <div id="formStatus" class="small" style="margin-top:10px;"></div>
-          </form>
-        </aside>
+        </div>
       </div>
-    </section>
-  </main>
 
-  <footer>
-    <div class="container footer-row">
-      <div>© <span id="year"></span> Thomas Technology Group</div>
-      <div class="small"><a href="services.html">Services</a></div>
+      <aside class="card">
+        <h3>Request Information or Support</h3>
+        <p class="small">
+          Provide a few details and we’ll respond shortly. If this is a bookkeeping cleanup, mention the timeframe and what you’d like corrected.
+        </p>
+
+        <!-- FORM: do not change IDs/names unless also updating JS + Logic App -->
+        <form id="contactForm" class="form">
+          <input type="text" name="name" placeholder="Your name" required />
+          <input type="email" name="email" placeholder="Your email" required />
+          <textarea name="message" placeholder="How can we help?" required></textarea>
+
+          <!-- Honeypot (bots fill this; humans won't see it) -->
+          <div style="position:absolute; left:-5000px; top:auto; width:1px; height:1px; overflow:hidden;">
+            <label>Company website</label>
+            <input type="text" name="company_site" tabindex="-1" autocomplete="off" />
+          </div>
+
+          <button class="btn" type="submit" id="submitBtn">Send message</button>
+          <div id="formStatus" class="small" style="margin-top:10px;"></div>
+
+          <div class="small" style="margin-top:10px;">
+            By submitting this form, you’re requesting a response from Thomas Technology Group.
+          </div>
+        </form>
+      </aside>
     </div>
-  </footer>
+  </section>
+</main>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+<footer>
+  <div class="container footer-row">
+    <div>© <span id="year"></span> Thomas Technology Group</div>
+    <div class="small"><a href="services.html">Services</a> • <a href="about.html">About</a></div>
+  </div>
+</footer>
 
-  <script>
-    const LOGIC_APP_URL = "https://prod-22.centralus.logic.azure.com:443/workflows/5efd8894fb154d0f971ad77116a43ceb/triggers/When_an_HTTP_request_is_received/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2FWhen_an_HTTP_request_is_received%2Frun&sv=1.0&sig=jxY4L79fInWPmJNHkuKUPiTVeg9B-j9UIAuABfPlUKs";
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 
-    const contactForm = document.getElementById("contactForm");
-    const statusEl = document.getElementById("formStatus");
-    const submitBtn = document.getElementById("submitBtn");
+<!-- FORM SUBMISSION (Logic App) -->
+<script>
+  const LOGIC_APP_URL = "https://prod-22.centralus.logic.azure.com:443/workflows/5efd8894fb154d0f971ad77116a43ceb/triggers/When_an_HTTP_request_is_received/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2FWhen_an_HTTP_request_is_received%2Frun&sv=1.0&sig=jxY4L79fInWPmJNHkuKUPiTVeg9B-j9UIAuABfPlUKs";
 
-    contactForm.addEventListener("submit", async (e) => {
-      e.preventDefault();
-      statusEl.textContent = "";
-      submitBtn.disabled = true;
-      submitBtn.textContent = "Sending...";
+  const contactForm = document.getElementById("contactForm");
+  const statusEl = document.getElementById("formStatus");
+  const submitBtn = document.getElementById("submitBtn");
 
-      const data = Object.fromEntries(new FormData(contactForm).entries());
+  contactForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    statusEl.textContent = "";
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Sending...";
 
-      try {
-        const res = await fetch(LOGIC_APP_URL, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(data)
-        });
+    const data = Object.fromEntries(new FormData(contactForm).entries());
 
-        if (!res.ok) throw new Error("Request failed");
+    try {
+      const res = await fetch(LOGIC_APP_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data)
+      });
 
-        statusEl.textContent = "Message sent. We’ll get back to you shortly.";
-        contactForm.reset();
-      } catch (err) {
-        statusEl.textContent = "Sorry — something went wrong. Please email us instead.";
-        console.error(err);
-      } finally {
-        submitBtn.disabled = false;
-        submitBtn.textContent = "Send message";
+      if (!res.ok) throw new Error("Request failed");
+
+      statusEl.textContent = "Message sent. We’ll get back to you shortly.";
+      contactForm.reset();
+    } catch (err) {
+      statusEl.textContent = "Sorry — something went wrong. Please email us instead.";
+      console.error(err);
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = "Send message";
+    }
+  });
+</script>
+
+<!-- MOBILE MENU -->
+<script>
+  const menuBtn = document.getElementById('menuBtn');
+  const menu = document.getElementById('primaryMenu');
+
+  if (menuBtn && menu) {
+    menuBtn.addEventListener('click', () => {
+      const open = menu.classList.toggle('is-open');
+      menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+
+    menu.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        menu.classList.remove('is-open');
+        menuBtn.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!menu.contains(e.target) && !menuBtn.contains(e.target)) {
+        menu.classList.remove('is-open');
+        menuBtn.setAttribute('aria-expanded', 'false');
       }
     });
-  </script>
-
-  <script>
-    const menuBtn = document.getElementById('menuBtn');
-    const menu = document.getElementById('primaryMenu');
-
-    if (menuBtn && menu) {
-      menuBtn.addEventListener('click', () => {
-        const open = menu.classList.toggle('is-open');
-        menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
-      });
-
-      // Close menu when clicking a link (mobile)
-      menu.querySelectorAll('a').forEach(a => {
-        a.addEventListener('click', () => {
-          menu.classList.remove('is-open');
-          menuBtn.setAttribute('aria-expanded', 'false');
-        });
-      });
-
-      // Close menu if you tap outside
-      document.addEventListener('click', (e) => {
-        if (!menu.contains(e.target) && !menuBtn.contains(e.target)) {
-          menu.classList.remove('is-open');
-          menuBtn.setAttribute('aria-expanded', 'false');
-        }
-      });
-    }
-  </script>
+  }
+</script>
 </body>
 </html>
