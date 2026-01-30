@@ -87,12 +87,13 @@ h1{ font-size:44px; letter-spacing:-0.02em; margin:0 0 10px; }
 }
 
 .card{
-  background:var(--card);
-  border:1px solid var(--line);
+  background:rgba(255,255,255,.85);
+  border:1px solid rgba(232,230,234,.9);
   border-radius:var(--radius);
-  box-shadow: var(--shadow);
+  box-shadow: 0 12px 30px rgba(0,0,0,.08);
   padding:18px;
 }
+
 .card h3{ margin:0 0 8px; }
 .card p{ margin:0; color:var(--muted); line-height:1.55; }
 .kpi{ display:grid; gap:10px; }
