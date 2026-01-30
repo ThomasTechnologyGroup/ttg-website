@@ -146,6 +146,35 @@
   }
 </script>
 
+  <script>
+  const btn = document.getElementById('menuBtn');
+  const menu = document.getElementById('primaryMenu');
+
+  if (btn && menu){
+    btn.addEventListener('click', () => {
+      const open = menu.classList.toggle('is-open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+
+    // Close menu when clicking a link (mobile)
+    menu.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        menu.classList.remove('is-open');
+        btn.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // Close menu if you tap outside
+    document.addEventListener('click', (e) => {
+      if (!menu.contains(e.target) && !btn.contains(e.target)){
+        menu.classList.remove('is-open');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+</script>
+
+
 </body>
 </html>
 
